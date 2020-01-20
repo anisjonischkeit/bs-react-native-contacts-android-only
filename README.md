@@ -38,4 +38,4 @@ Contacts.getAll(result => switch(result) {
 
 ## Basic Usage
 
-see /test/Example.re
+see [test/Example.re](test/Example.re)
