@@ -1,0 +1,20 @@
+{
+  "name": "bs-react-native-contacts",
+  "sources": [
+    "src",
+    {
+      "dir": "test",
+      "type": "dev"
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": false,
+  "refmt": 3,
+  "bs-dependencies": ["reason-react", "reason-react-native"]
+}

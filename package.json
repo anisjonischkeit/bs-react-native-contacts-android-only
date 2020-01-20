@@ -1,0 +1,46 @@
+{
+  "name": "bs-react-native-contacts",
+  "version": "0.0.1",
+  "description": "react-native-contacts bindings for BuckleScript in Reason",
+  "scripts": {
+    "test": "bsb -make-world && node test/Example.bs.js",
+    "build": "bsb -make-world",
+    "clean": "bsb -clean"
+  },
+  "author": "Anis Jonischkeit <anis.jonischkeit@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anisjonischkeit/bs-react-native-contacts"
+  },
+  "dependencies": {
+    "react-native-contacts": "^5.0.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-native": "^0.60.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^7.0.1",
+    "react": "^16.8.0",
+    "react-native": "^0.60.0",
+    "reason-react": "^0.7.0",
+    "reason-react-native": "^0.60.0"
+  },
+  "bugs": {
+    "url": "https://github.com/anisjonischkeit/bs-react-native-contacts/issues"
+  },
+  "sources": [
+    "src",
+    "test"
+  ],
+  "homepage": "https://github.com/anisjonischkeit/bs-react-native-contacts",
+  "keywords": [
+    "readme",
+    "gfm",
+    "github",
+    "contacts",
+    "react-native",
+    "npm"
+  ]
+}
