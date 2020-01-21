@@ -1,5 +1,7 @@
 🚨🚨THIS IS EXPERIMENTAL.🚨🚨
+
 🚨🚨NOT ALL FEATURES WORK ON IOS.🚨🚨
+
 IF YOU PLAN TO USE IOS AS A TARGET, USE [THIS](https://github.com/anisjonischkeit/bs-react-native-contacts).
 
 The types are based on the index.d.ts spec found in the react-native-contacts project however I haven't tested the full surface area of this library so if you find any problems let me know.
