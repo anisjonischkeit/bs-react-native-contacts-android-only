@@ -23,14 +23,15 @@ type birthday = {
   month: float,
   year: float,
 };
+
 type contact = {
   recordID: string,
   backTitle: string,
   company: string,
   emailAddresses: array(emailAddress),
-  familyName: Js.Nullable.t(string),
+  familyName: string,
   givenName: string,
-  middleName: Js.Nullable.t(string),
+  middleName: string,
   jobTitle: string,
   phoneNumbers: array(phoneNumber),
   hasThumbnail: bool,
@@ -104,6 +105,17 @@ external openExistingContact:
   "";
 let openExistingContact = (contact, cb) =>
   openExistingContact(contact, cb->wrapCb);
+
+[@bs.module "react-native-contacts"]
+external viewExistingContact:
+  (~contact: contact, ~callback: jsCallback(contact)) => unit =
+  "";
+let viewExistingContact = (contact, cb) =>
+  viewExistingContact(contact, cb->wrapCb);
+
+[@bs.module "react-native-contacts"]
+external pickContact: (~callback: jsCallback(contact)) => unit = "";
+let pickContact = cb => pickContact(cb->wrapCb);
 
 [@bs.module "react-native-contacts"]
 external updateContact:

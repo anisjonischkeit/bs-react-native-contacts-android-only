@@ -5,6 +5,7 @@
   "scripts": {
     "test": "bsb -make-world && node test/Example.bs.js",
     "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
     "clean": "bsb -clean"
   },
   "author": "Anis Jonischkeit <anis.jonischkeit@gmail.com>",
@@ -14,7 +15,7 @@
     "url": "https://github.com/anisjonischkeit/bs-react-native-contacts"
   },
   "dependencies": {
-    "react-native-contacts": "^5.0.6"
+    "react-native-contacts": "https://github.com/anisjonischkeit/react-native-contacts.git"
   },
   "peerDependencies": {
     "react": "^16.8.0",

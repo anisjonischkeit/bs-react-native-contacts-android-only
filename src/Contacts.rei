@@ -28,9 +28,9 @@ type contact = {
   backTitle: string,
   company: string,
   emailAddresses: array(emailAddress),
-  familyName: Js.Nullable.t(string),
+  familyName: string,
   givenName: string,
-  middleName: Js.Nullable.t(string),
+  middleName: string,
   jobTitle: string,
   phoneNumbers: array(phoneNumber),
   hasThumbnail: bool,
@@ -52,6 +52,8 @@ let getPhotoForId: (string, callback(string)) => unit;
 let addContact: (contact, callback(unit)) => unit;
 let openContactForm: (contact, callback(contact)) => unit;
 let openExistingContact: (contact, callback(contact)) => unit;
+let viewExistingContact: (contact, callback(contact)) => unit;
+let pickContact: callback(contact) => unit;
 let updateContact: (contact, callback(unit)) => unit;
 let deleteContact: (contact, callback(unit)) => unit;
 let getContactsMatchingString: (string, callback(array(contact))) => unit;
