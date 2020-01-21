@@ -24,22 +24,39 @@ type birthday = {
   year: float,
 };
 
+[@bs.deriving abstract]
 type contact = {
+  [@bs.optional]
   recordID: string,
+  [@bs.optional]
   backTitle: string,
+  [@bs.optional]
   company: string,
+  [@bs.optional]
   emailAddresses: array(emailAddress),
+  [@bs.optional]
   familyName: string,
+  [@bs.optional]
   givenName: string,
+  [@bs.optional]
   middleName: string,
+  [@bs.optional]
   jobTitle: string,
+  [@bs.optional]
   phoneNumbers: array(phoneNumber),
+  [@bs.optional]
   hasThumbnail: bool,
+  [@bs.optional]
   thumbnailPath: string,
+  [@bs.optional]
   postalAddresses: array(postalAddress),
+  [@bs.optional]
   prefix: Js.Nullable.t(string),
+  [@bs.optional]
   suffix: Js.Nullable.t(string),
+  [@bs.optional]
   department: string,
+  [@bs.optional]
   birthday,
 };
 
@@ -114,8 +131,8 @@ let viewExistingContact = (contact, cb) =>
   viewExistingContact(contact, cb->wrapCb);
 
 [@bs.module "react-native-contacts"]
-external pickContact: (~callback: jsCallback(contact)) => unit = "";
-let pickContact = cb => pickContact(cb->wrapCb);
+external openContactPicker: (~callback: jsCallback(contact)) => unit = "";
+let openContactPicker = cb => openContactPicker(cb->wrapCb);
 
 [@bs.module "react-native-contacts"]
 external updateContact:
