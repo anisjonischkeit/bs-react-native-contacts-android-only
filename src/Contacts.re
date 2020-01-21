@@ -95,20 +95,20 @@ let addContact = (contact, cb) => addContact(contact, cb->wrapCb);
 
 [@bs.module "react-native-contacts"]
 external openContactForm:
-  (~contact: contact, ~callback: jsCallback(contact)) => unit =
+  (~contact: contact, ~callback: jsCallback(option(contact))) => unit =
   "";
 let openContactForm = (contact, cb) => openContactForm(contact, cb->wrapCb);
 
 [@bs.module "react-native-contacts"]
 external openExistingContact:
-  (~contact: contact, ~callback: jsCallback(contact)) => unit =
+  (~contact: contact, ~callback: jsCallback(option(contact))) => unit =
   "";
 let openExistingContact = (contact, cb) =>
   openExistingContact(contact, cb->wrapCb);
 
 [@bs.module "react-native-contacts"]
 external viewExistingContact:
-  (~contact: contact, ~callback: jsCallback(contact)) => unit =
+  (~contact: contact, ~callback: jsCallback(option(contact))) => unit =
   "";
 let viewExistingContact = (contact, cb) =>
   viewExistingContact(contact, cb->wrapCb);
